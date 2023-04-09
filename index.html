@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap"
+      rel="stylesheet" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <script defer src="./script.js"></script>
+
+    <title>Магазин игр</title>
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <div class="container">
+          <nav class="navbar">
+            <h1 class="logo">Магазин игр</h1>
+            <ul class="menu">
+              <li class="menu-item">
+                <button class="auth-btn" onclick="showModal(this, 'auth')">Войти</button>
+              </li>
+              <li class="menu-item">
+                <button class="cart-btn" onclick="showModal(this, 'cart'), Cart.render()">Корзина</button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main class="main">
+        <div class="container">
+          <h2 class="main-title">Все игры</h2>
+          <div class="main-inner">
+            <ul class="list gamesList"></ul>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-inner">
+            <p class="copyright">Все права зашищены</p>
+            <a class="github" href="#">Github</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <div class="cart">
+      <div class="cart-wrapper modal-wrapper">
+        <div class="cart-header">
+          <h4 class="cart-title">Корзина</h4>
+          <button class="cart-close close-modal">Закрыть</button>
+        </div>
+        <div class="cart-body">
+          <div class="empty">
+            <img src="./empty.png" alt="empty" />
+          </div>
+        </div>
+        <div class="cart-footer">
+          <p class="cart-price">Общая сумма:</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="auth">
+      <div class="auth-wrapper modal-wrapper">
+        <button class="auth-close close-modal">Закрыть</button>
+        <form class="auth-form" action="">
+          <h5 class="auth-form-title">Авторизация</h5>
+          <div class="form-field">
+            <input class="form-input" type="text" placeholder="Логин" required />
+          </div>
+          <div class="form-field">
+            <input class="form-input" type="password" placeholder="Пароль" required />
+          </div>
+          <div class="form-field">
+            <input class="form-input" type="submit" value="Войти" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
